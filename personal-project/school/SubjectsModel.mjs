@@ -4,13 +4,12 @@ import {forid} from './id'
 class SubjectsModel {
     constructor(subject) {
         Validator.validate(subject, subjSchema);
-        this.id = forid();
-        subjects.set(this.id, subject);
-        return this.id;
+        this.title = subject.title;
+        this.lessons = subject.lessons;
+        this.description = obj.description;
     }
 }
- 
-const subjects = new Map();
+
 
 
 export { subjects, SubjectsModel };
